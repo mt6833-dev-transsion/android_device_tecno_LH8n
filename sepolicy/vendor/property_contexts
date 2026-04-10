@@ -47,3 +47,5 @@ vendor.tee.googlekey.status                          u:object_r:vendor_mtk_trust
 ro.vendor.vt.                               u:object_r:vendor_mtk_vendor_vt_prop:s0
 
 vendor.mtk.omx.core.prop   u:object_r:vendor_mtk_omx_core_prop:s0
+
+ro.vendor.aware_available           u:object_r:vendor_default_prop:s0

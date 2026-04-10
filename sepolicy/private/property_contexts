@@ -1,3 +1,16 @@
 ro.mtk_cam_dualzoom_support                 u:object_r:vendor_mtk_camera_prop:s0
 ro.mtk_cam_stereo_camera_support            u:object_r:vendor_mtk_camera_prop:s0
 ro.mtk_key_manager_support                  u:object_r:vendor_mtk_default_prop:s0
+
+# MTK GPU / GLT driver version property
+persist.glt.version                 u:object_r:vendor_default_prop:s0
+
+# MTK GPU driver lock property
+persist.meow.ddk_lock               u:object_r:vendor_default_prop:s0
+
+# EGL apex and blob cache properties (set by system EGL layer, read by vendor GPU HAL)
+ro.egl.apex                         u:object_r:vendor_default_prop:s0
+ro.egl.blobcache.multifile          u:object_r:vendor_default_prop:s0
+
+# ARC GPU/EGL layer properties (accessed by mtk_hal_camera EGL init path)
+arc.                                u:object_r:vendor_default_prop:s0

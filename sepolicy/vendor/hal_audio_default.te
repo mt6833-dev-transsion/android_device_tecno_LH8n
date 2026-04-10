@@ -7,5 +7,3 @@ allow hal_audio_default sysfs:file { read getattr open };
 r_dir_file(hal_audio_default, sysfs_batteryinfo)
 set_prop(hal_audio_default, vendor_mtk_audiohal_prop)
 hal_client_domain(hal_audio_default, hal_power)
-
-allow hal_audio_default sysfs_therm:dir { search };

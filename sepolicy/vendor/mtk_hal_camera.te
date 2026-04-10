@@ -32,3 +32,10 @@ allow mtk_hal_camera hal_trancamserver_hwservice:hwservice_manager find;
 set_prop(mtk_hal_camera, vendor_mtk_camera_prop)
 
 allow mtk_hal_camera system_data_file:dir { search };
+
+# Reading vendor_default_prop covers arc.*, ro.egl.*, persist.glt.*,
+# persist.meow.*, ro.vendor.aware_available (labeled via property_contexts)
+allow mtk_hal_camera vendor_default_prop:file read;
+
+# Reading graphics_config_writable_prop covers persist.graphics.egl
+allow mtk_hal_camera graphics_config_writable_prop:file read;
