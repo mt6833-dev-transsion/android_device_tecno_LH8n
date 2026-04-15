@@ -10,11 +10,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile.
 $(call inherit-product, device/tecno/LH8n/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common afterlife stuff.
+$(call inherit-product, vendor/afterlife/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_LH8n
+PRODUCT_NAME := afterlife_LH8n
 PRODUCT_DEVICE := LH8n
 PRODUCT_MANUFACTURER := TECNO
 PRODUCT_BRAND := TECNO
@@ -33,3 +33,12 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     SystemName=$(PRODUCT_SYSTEM_NAME) \
     ProductModel=$(PRODUCT_SYSTEM_DEVICE) \
     DeviceProduct=$(PRODUCT_SYSTEM_NAME)
+
+# AfterLify
+AFTERLIFE_MAINTAINER := Nazephyrus
+TARGET_ENABLE_BLUR := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+SYSTEM_OPTIMIZE_JAVA := true
+TARGET_BOOT_ANIMATION_RES := 1080
+SYSTEMUI_OPTIMIZE_JAVA := true
+TARGET_SUPPORTS_QUICK_TAP := true
