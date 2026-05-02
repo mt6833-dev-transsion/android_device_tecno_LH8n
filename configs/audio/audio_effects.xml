@@ -31,7 +31,7 @@
         <!--DOLBY END-->
         <!--DOLBY VQE-->
         <library name="vqe" path="libswvqe.so"/>
-        <!--DOLBY END
+        <!--DOLBY END-->
 		<!--Spatial Audio-->
         <library name="spatializer" path="libspatialaudio.so"/>
 		<!--Spatial Audio-->
