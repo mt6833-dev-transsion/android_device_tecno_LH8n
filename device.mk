@@ -96,7 +96,7 @@ PRODUCT_PACKAGES += \
    vendor.mediatek.hardware.bluetooth.audio@2.2.vendor
    
 # Dolby
-$(call inherit-product, vendor/sony/dolby/setup.mk)
+$(call inherit-product, hardware/dolby/dolby.mk)
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2460
