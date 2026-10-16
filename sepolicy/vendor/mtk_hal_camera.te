@@ -32,3 +32,7 @@ allow mtk_hal_camera hal_trancamserver_hwservice:hwservice_manager find;
 set_prop(mtk_hal_camera, vendor_mtk_camera_prop)
 
 allow mtk_hal_camera system_data_file:dir { search };
+
+# Dontaudit denials
+dontaudit mtk_hal_camera default_prop:file r_file_perms;
+dontaudit mtk_hal_camera shell_data_file:dir search;
