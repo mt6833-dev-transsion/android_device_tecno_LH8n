@@ -248,7 +248,8 @@ PRODUCT_PACKAGES += \
     SystemUIOverlay_LH8n \
 	Launcher3DeviceOverlay_LH8n \
 	TetheringResOverlay_LH8n \
-    WifiResOverlay_LH8n
+    WifiResOverlay_LH8n \
+    ConnectivityResOverlay_LH8n
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
