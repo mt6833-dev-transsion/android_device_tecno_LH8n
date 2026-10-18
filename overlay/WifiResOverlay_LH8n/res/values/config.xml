@@ -17,6 +17,17 @@
            be checked via NL80211 interface -->
     <bool name="config_wifi11axSupportOverride">false</bool>
 
+    <!-- Stock calibrated RSSI level thresholds (4 bars at -64 dBm) -->
+    <integer-array name="config_wifiRssiLevelThresholds">
+        <item>-90</item>
+        <item>-85</item>
+        <item>-75</item>
+        <item>-64</item>
+    </integer-array>
+
+    <!-- Indicates whether or not the WLAN driver supports NL80211 reg change events -->
+    <bool name="config_wifiDriverSupportedNl80211RegChangedEvent" translatable="false">false</bool>
+
     <!-- boolean indicating whether the WiFi chipset has 5GHz band support.
          Note: This config is replacing the config_wifi_dual_band_support
          since more bands may now be supported (such as 6GHz), the naming dual_band
@@ -56,7 +67,10 @@
     <bool translatable="false" name="config_wifi_softap_ieee80211ac_supported">true</bool>
 
     <!-- integer indicating additional disconnect delay (in ms) after IMS onLost() indication is received -->
-    <integer translatable="false" name="config_wifiDelayDisconnectOnImsLostMs">10</integer>
+    <integer translatable="false" name="config_wifiDelayDisconnectOnImsLostMs">1000</integer>
+
+    <!-- Device default OUI prefix for randomized MAC addresses (MediaTek Inc.) -->
+    <string translatable="false" name="config_wifi_random_mac_oui">00-0C-E7</string>
 
     <!-- List of allowed channels in 2GHz band for softap. If the device doesn't want to restrict
      channels this should be empty. Values is a comma separated channel string and/or channel

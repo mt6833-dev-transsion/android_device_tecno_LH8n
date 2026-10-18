@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2026 The LineageOS Project
+
+  SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Whether to avoid bad Wi-Fi network automatically -->
+    <integer name="config_networkAvoidBadWifi">0</integer>
+
+    <!-- Whether to notify user when network has no internet as a dialog -->
+    <bool name="config_notifyNoInternetAsDialogWhenHighPriority">true</bool>
+</resources>
