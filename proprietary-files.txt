@@ -174,11 +174,6 @@ vendor/etc/audio_param/VoWMicSetting_ParamUnitDesc.xml
 vendor/etc/audio_param/VoWVoiceCommand_AudioParam.xml
 vendor/etc/audio_param/VoWVoiceCommand_ParamUnitDesc.xml
 
-# Biometrics - FP
-vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
-vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc
-vendor/etc/vintf/manifest/android.hardware.biometrics.fingerprint@2.1-service.xml
-
 # Bluetooth
 vendor/lib64/libbluetooth_mtk_pure.so
 vendor/lib64/libbluetooth_mtk.so

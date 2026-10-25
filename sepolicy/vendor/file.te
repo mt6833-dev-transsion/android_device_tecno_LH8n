@@ -15,6 +15,7 @@ type proc_gesture_function, fs_type, proc_type, sysfs_type;
 type proc_gesture_state, fs_type, proc_type, sysfs_type;
 
 # Fingerprint
+type sysfs_fp_name_path, fs_type, sysfs_type;
 type vendor_fingerprint_data_file, data_file_type, file_type;
 type vendor_sysfs_fingerprint, fs_type, sysfs_type;
 
