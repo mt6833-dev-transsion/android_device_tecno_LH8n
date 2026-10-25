@@ -125,6 +125,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libsuspend
 	
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1-service.millennium
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-V1-ndk \
