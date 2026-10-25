@@ -88,6 +88,8 @@ on boot
     write /sys/devices/platform/odm/odm:tran_battery/OTG_CTL "1"
     #SDD:add OTG feature for TESSCR-6368 by weike.xu 20210512 end
 
+    setprop sys.usb.config adb
+
 on property:init.svc.adbd=stopped
     setprop sys.usb.ffs.ready 0
 
@@ -111,48 +113,6 @@ on property:sys.usb.config=none && property:sys.usb.configfs=1
     rm /config/usb_gadget/g1/configs/b.1/f2
     rm /config/usb_gadget/g1/configs/b.1/f3
     rmdir /config/usb_gadget/g1/functions/rndis.gs4
-    setprop sys.usb.state ${sys.usb.config}
-
-
-### main function : adb ###
-on property:sys.usb.config=adb && property:sys.usb.configfs=1
-    setprop sys.usb.pid 0xD001
-    start adbd
-
-on property:sys.usb.ffs.ready=1 && property:sys.usb.config=adb && property:sys.usb.configfs=1
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "adb"
-    write /config/usb_gadget/g1/idVendor ${sys.usb.vid}
-    write /config/usb_gadget/g1/idProduct ${sys.usb.pid}
-    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    setprop sys.usb.state ${sys.usb.config}
-
-
-### main function : sideload ###
-on property:sys.usb.config=sideload && property:sys.usb.configfs=1
-    setprop sys.usb.pid 0xD001
-    start adbd
-
-on property:sys.usb.ffs.ready=1 && property:sys.usb.config=adb && property:sys.usb.configfs=1
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "adb"
-    write /config/usb_gadget/g1/idVendor ${sys.usb.vid}
-    write /config/usb_gadget/g1/idProduct ${sys.usb.pid}
-    symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
-    setprop sys.usb.state ${sys.usb.config}
-
-
-### main function : fastboot ###
-on property:sys.usb.config=fastboot && property:sys.usb.configfs=1
-    setprop sys.usb.pid 0x4EE0
-    start fastbootd
-
-on property:sys.usb.ffs.ready=1 && property:sys.usb.config=adb && property:sys.usb.configfs=1
-    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "fastboot"
-    write /config/usb_gadget/g1/idVendor ${sys.usb.vid}
-    write /config/usb_gadget/g1/idProduct ${sys.usb.pid}
-    symlink /config/usb_gadget/g1/functions/ffs.fastboot /config/usb_gadget/g1/configs/b.1/f1
-    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
     setprop sys.usb.state ${sys.usb.config}
 
 
