@@ -696,7 +696,6 @@ vendor/lib64/libTranGenderDetect.so
 vendor/lib64/libTranHumanLight.so
 vendor/lib64/libTranITDFaceBeauty.so
 vendor/lib64/libTranMagicSky.so
-vendor/lib64/libTranMegHumanEffect.so
 vendor/lib64/libTranPlatHW.so
 vendor/lib64/libTranSlimBody.so
 vendor/lib64/libTranSmartDetection.so
@@ -1185,10 +1184,6 @@ vendor/data/camera/model/lut_sunset2.png
 vendor/data/camera/model/lut_sunset.png
 vendor/data/camera/model/lut_sunshine2.png
 vendor/data/camera/model/lut_sunshine.png
-vendor/data/camera/model/meghumaneffect/human_model_image
-vendor/data/camera/model/meghumaneffect/human_model_video
-vendor/data/camera/model/meghumaneffect/opencl_algo.cache
-vendor/data/camera/model/meghumaneffect/relight
 vendor/data/camera/model/M_Segment_DoubleLoss_V1.model
 vendor/data/camera/model/preview_sky_aurora.jpg
 vendor/data/camera/model/preview_sky_detector.mnn
