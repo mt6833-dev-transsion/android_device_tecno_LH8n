@@ -7,8 +7,10 @@ ro.camera.sound.forced=0
 ro.audio.silent=0
 ro.config.vc_call_vol_default=11
 ro.config.media_vol_default=13
+ro.config.media_vol_steps=30
 ro.config.alarm_vol_default=13
 ro.config.system_vol_default=15
+persist.bluetooth.disableabsvol=true
 
 # Blur
 ro.sf.blurs_are_expensive=1
