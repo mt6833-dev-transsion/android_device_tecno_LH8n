@@ -273,6 +273,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     CustomWallpapers
 
+# Ringtone
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/media/audio/ringtones/Ambatukam_Termuwani.mp3:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/Ambatukam_Termuwani.mp3
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \

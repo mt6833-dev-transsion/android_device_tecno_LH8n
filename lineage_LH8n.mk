@@ -13,6 +13,9 @@ $(call inherit-product, device/tecno/LH8n/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Drop LineageOS's default ringtone (Orion.ogg) so the device's value is the only definition.
+PRODUCT_PRODUCT_PROPERTIES := $(filter-out ro.config.ringtone=%,$(PRODUCT_PRODUCT_PROPERTIES))
+
 # Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_LH8n
 PRODUCT_DEVICE := LH8n
