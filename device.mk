@@ -268,6 +268,11 @@ PRODUCT_PACKAGES += \
 	LineageDialer \
 	LineageSDKResOverlay_LH8n
 	
+# Wallpapers
+# Partner wallpaper package (naden01/walls) exposing the "Naze Wall" category.
+PRODUCT_PACKAGES += \
+    CustomWallpapers
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
