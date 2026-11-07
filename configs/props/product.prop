@@ -18,8 +18,3 @@ ro.fm.short_ana_sup=1
 
 # Telephony
 persist.vendor.radio.tsd.multisimmode=2
-
-# Default ringtone
-# Replaces LineageOS's ro.config.ringtone=Orion.ogg (vendor/lineage/config/telephony.mk).
-# That entry is filtered out in lineage_LH8n.mk so this is the only definition.
-ro.config.ringtone=Ambatukam_Termuwani.mp3
